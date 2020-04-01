@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-art
 title: midnight-phase
 tags:
   - scene
