@@ -1,4 +1,4 @@
-# pixelart
+# 👾 pixelart
 
-<img src='./asserts/hero-image.png' />
+<img src='https://alexjpaz.github.io/pixelart/assets/hero-image.gif' />
 
