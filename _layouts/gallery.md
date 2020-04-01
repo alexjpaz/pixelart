@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+<style>
+.is-text-centered {
+    text-align: center;
+}
+</style>
 
 <div class="home">
   {%- if page.title -%}
@@ -21,7 +26,7 @@ layout: default
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-    <ul class="post-list">
+    <ul class="post-list is-text-centered">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <li>
