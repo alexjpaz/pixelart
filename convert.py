@@ -12,6 +12,7 @@ output=$(cat ${input} | openssl base64 | tr -d '\n')
 cat << EOF > ./_posts/${today}-${name}.md
 ---
 layout: post
+category: scene
 title: ${name}
 image: data:image/${suffix};base64,${output}
 ---
