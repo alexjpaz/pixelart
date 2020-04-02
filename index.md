@@ -1,3 +1,3 @@
 ---
-layout: gallery
+layout: home-gallery
 ---

@@ -3,7 +3,7 @@ title: "pixelart by paz"
 theme: minima
 
 collections:
-  - projects
+  - scenes
 
 author:
   name: Alexander Paz
@@ -11,3 +11,4 @@ author:
 
 header_pages:
   - about.md
+  - gallery/index.md
