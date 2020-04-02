@@ -1,3 +1,3 @@
 ---
-layout: home-gallery
+layout: home-bulma
 ---
