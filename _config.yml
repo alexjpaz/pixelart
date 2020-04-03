@@ -1,5 +1,7 @@
 title: "pixelart by paz"
 
+theme: minima
+
 collections:
   - scenes
 
