@@ -1,7 +1,3 @@
----
-layout: default-bulma
----
-
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container">
@@ -20,4 +16,3 @@ layout: default-bulma
   </div>
 </section>
 
-{% include bulma/gallery.html %}
