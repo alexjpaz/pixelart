@@ -12,3 +12,6 @@ services:
     command:
       - jekyll
       - serve
+      - -b
+      - /pixelart
+      - -l
