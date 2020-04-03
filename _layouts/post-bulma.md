@@ -20,14 +20,7 @@
         </div>
       </div>
     </section>
-    <article class='section'>
-      <div class='has-text-centered'>
-          <p> <img src='{{ page.image }}' /> </p>
-      </div>
-      <div class='content'>
-        {{ content }}
-      </div>
-    </article>
+    {{ content }}
  </body>
   {% include bulma/footer.html %}
 </html>
