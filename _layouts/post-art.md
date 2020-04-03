@@ -13,7 +13,11 @@ layout: post-bulma
       <div class='content is-large'>
       {{ content }}
       </div>
+      <section class='section'>
+          <a class='button is-success is-large is-fullwidth' href='{{ "/gallery" | relative_url }}' >Gallery</a>
+      </section>
     </div>
   </div>
 </article>
+
 

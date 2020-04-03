@@ -3,3 +3,11 @@
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
 }
+
+.pixelart-gallery-image {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

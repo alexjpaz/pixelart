@@ -5,20 +5,28 @@ layout: post-bulma
 {%- assign date_format = "%b %-d, %Y" -%}
 
 <div class='container'>
-<div id='target'>...</div>
-<h2>Other tags</h2>
-{% assign rawtags = "" %}
-{% for post in site.posts %}
-  {% assign ttags = post.tags | join:'|' | append:'|' %}
-  {% assign rawtags = rawtags | append:ttags %}
-{% endfor %}
-{% assign rawtags = rawtags | split:'|' | sort | uniq %}
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <div class='section'>
+        <div id='target'>...</div>
+      </div>
+      <section class='section'>
+      <h2>Other tags</h2>
+      {% assign rawtags = "" %}
+      {% for post in site.posts %}
+        {% assign ttags = post.tags | join:'|' | append:'|' %}
+        {% assign rawtags = rawtags | append:ttags %}
+      {% endfor %}
+      {% assign rawtags = rawtags | split:'|' | sort | uniq %}
 
-{% for tag in rawtags %}
-<a href='{{ "/tags" | relative_url }}?tag={{ tag }}'> 
-  <span class="tag is-info is-light is-large">{{ tag }}</span>
-</a>
-{% endfor %}
+      {% for tag in rawtags %}
+      <a href='{{ "/tags" | relative_url }}?tag={{ tag }}'> 
+        <span class="tag is-info is-light is-large">{{ tag }}</span>
+      </a>
+      {% endfor %}
+      </section>
+    </div>
+  </div>
 </div>
 
 <script id="template" type="x-tmpl-mustache">

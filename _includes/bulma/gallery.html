@@ -4,10 +4,18 @@
       <div class='has-text-centered'>
         {%- for post in site.posts -%}
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image }}" class='is-pixel-perfect' alt="{{ post.title }}">
+          <span class='pixelart-gallery-image' style='background-image: url({{ post.image }})'></span>
         </a>
-        </figure>
         {%- endfor -%}
+        {% assign mod = site.posts.size | modulo: 3 %}
+
+        {% if mod != 0 %}
+        <span class='pixelart-gallery-image'></span>
+
+        {% endif %}
+        <section class='section'>
+          <a class='button is-success is-large is-fullwidth' href='{{ "/gallery" | relative_url }}' >Gallery</a>
+        </section>
       </div>
     </div>
   </div>
