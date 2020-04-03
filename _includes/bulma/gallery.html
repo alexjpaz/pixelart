@@ -3,7 +3,7 @@
     <div class='column is-half is-offset-one-quarter'>
       <div class='has-text-centered'>
         {%- for post in site.posts -%}
-        <a href="{{ post.url }}">
+        <a href="{{ post.url | relative_url }}">
           <img src="{{ post.image }}" class='is-pixel-perfect' alt="{{ post.title }}">
         </a>
         </figure>
