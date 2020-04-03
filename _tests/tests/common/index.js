@@ -83,14 +83,19 @@ class BrowserEnvironment {
   };
 
   async setup() {
-    this.server = await this.startStaticHttpServer();
-    const { browser, page } = await this.startBrowser();
+    try {
+      this.server = await this.startStaticHttpServer();
+      const { browser, page } = await this.startBrowser();
 
-    this.browser = browser;
-    this.page = page;
+      this.browser = browser;
+      this.page = page;
 
-    const { port } = this.server.address();
-    this.baseUrl = `http://localhost:${port}`;
+      const { port } = this.server.address();
+      this.baseUrl = `http://localhost:${port}`;
+    } catch(e) {
+      console.error(e);
+      throw e;
+    }
   }
 
   async teardown() {
@@ -135,6 +140,9 @@ class VisualDiffEnvironment extends BrowserEnvironment {
   }
 
   async renameTempToOutput() {
+    if(!this.screenshotsFolder) {
+      return;
+    }
     const currentPath = path.join(pkgPath, "output", "current");
 
     await this.mkdir(currentPath);
@@ -159,6 +167,7 @@ class VisualDiffEnvironment extends BrowserEnvironment {
       await this.createOutputFolder();
       await this.archiveOldScreenshotsFolder();
     } catch(e) {
+      console.error(e);
       throw e;
     }
   }
@@ -168,6 +177,7 @@ class VisualDiffEnvironment extends BrowserEnvironment {
       await super.teardown();
       await this.renameTempToOutput();
     } catch(e) {
+      console.error(e);
       throw e;
     }
   }
