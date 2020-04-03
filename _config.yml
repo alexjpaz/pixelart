@@ -8,6 +8,7 @@ collections:
 author:
   name: Alexander Paz
   email: "alex.j.paz@gmail.com"
+  website: "https://alexjpaz.com"
 
 header_pages:
   - about.md

@@ -1,0 +1,15 @@
+<section class="section">
+  <div class='columns'>
+    <div class='column is-half is-offset-one-quarter'>
+      <div class='has-text-centered'>
+        {%- for post in site.posts -%}
+        <a href="{{ post.url }}">
+          <img src="{{ post.image }}" class='is-pixel-perfect' alt="{{ post.title }}">
+        </a>
+        </figure>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
