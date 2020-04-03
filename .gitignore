@@ -4,3 +4,4 @@ _site/
 node_modules/
 _tests/output/
 yarn-error.log
+.DS_Store
