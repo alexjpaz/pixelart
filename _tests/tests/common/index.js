@@ -65,6 +65,10 @@ class BrowserEnvironment {
     const files = path.join(__dirname, '..', '..', '..','_site');
     app.use('/pixelart', express.static(files));
 
+    app.get('*', function(req, res){
+      res.status(404).sendFile(path.join(files, '404.html'));
+    });
+
     const server = app.listen();
 
     await once(server, 'listening');
