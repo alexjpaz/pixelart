@@ -7,9 +7,8 @@ collections:
 
 author:
   name: Alexander Paz
+  short_name: '@alexjpaz'
   email: "alex.j.paz@gmail.com"
   website: "https://alexjpaz.com"
 
-header_pages:
-  - about.md
-  - gallery/index.md
+github_url: "https://github.com/alexjpaz/pixelart"
