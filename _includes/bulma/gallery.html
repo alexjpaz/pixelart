@@ -10,12 +10,9 @@
         {% assign mod = site.posts.size | modulo: 3 %}
 
         {% if mod != 0 %}
-        <span class='pixelart-gallery-image'></span>
+        <span class='pixelart-gallery-image is-hidden-touch'></span>
 
         {% endif %}
-        <section class='section'>
-          <a class='button is-success is-large is-fullwidth' href='{{ "/gallery" | relative_url }}' >Gallery</a>
-        </section>
       </div>
     </div>
   </div>
