@@ -5,7 +5,11 @@ layout: post-bulma
 <article class='section'>
   <div class='section'>
      <div class='has-text-centered'>
-         <p> <img src='{{ page.image }}' /> </p>
+         <img src='{{ page.image }}' 
+            {%- if page.image_background -%}
+            style='background: {{ page.image_background }};'
+            {%- endif -%}
+            class='pixelart-post-art-main-image' />
      </div>
   </div>
   <div class="columns">
