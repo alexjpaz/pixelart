@@ -16,3 +16,5 @@ title: ${name}
 image: data:image/${suffix};base64,${output}
 ---
 EOF
+
+$EDITOR ./_posts/${today}-${name}.md
