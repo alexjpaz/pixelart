@@ -10,8 +10,10 @@
   width: 200px;
   background-repeat: no-repeat;
   background-position: center;
+  image-rendering: pixelated;
 }
 
 .pixelart-post-art-main-image {
   padding: 10px;
+  image-rendering: pixelated;
 }

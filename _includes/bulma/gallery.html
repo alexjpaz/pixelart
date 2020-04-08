@@ -4,7 +4,12 @@
       <div class='has-text-centered'>
         {%- for post in site.posts -%}
         <a href="{{ post.url | relative_url }}">
-          <span class='pixelart-gallery-image' style='background-image: url({{ post.image }})'></span>
+          <span class='pixelart-gallery-image' style='
+            background-image: url({{ post.image }});
+            {%- if post.image_size -%}
+            background-size: {{ post.image_size }};
+            {%- endif -%}
+          '></span>
         </a>
         {%- endfor -%}
         {% assign mod = site.posts.size | modulo: 3 %}

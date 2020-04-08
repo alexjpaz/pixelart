@@ -7,7 +7,12 @@ layout: post-bulma
      <div class='has-text-centered'>
          <img src='{{ page.image }}' 
             {%- if page.image_background -%}
-            style='background: {{ page.image_background }};'
+            style='
+            background: {{ page.image_background }};
+            {%- if page.image_scale_width -%}
+            width: {{ page.image_scale_width }};
+            {%- endif -%}
+            '
             {%- endif -%}
             class='pixelart-post-art-main-image' />
      </div>
