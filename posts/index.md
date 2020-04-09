@@ -9,20 +9,28 @@ header_page: true
 
 <div class='content'>
 {%- for category in site.categories -%}
-  <h2>
-    <a href='{{ category.first | relative_url }}'>
-        {{ category | first }}
-    </a>
-  </h2>
+    <hr />
+    <div class="level">
+     <div class="level-left">
+      <div class="level-item">
+       <span class="icon">
+        <i class="far fa-folder"></i>
+       </span>
+       <a href='{{ category.first | relative_url }}'>
+       {{ category | first }}
+       </a>
+      </div>
+     </div>
+    </div>
 {% for post in category.last %}
   <article>
-  <h3 class='title'>
+  <h4 class='title'>
       <a href="{{ post.url | relative_url }}">
           {{ post.title }}
       </a>
-  </h3>
+  </h4>
   <p>
-      {{ post.date | date: date_format }}
+      {%- include formatted_date.md value=post.date -%}
       <p>
           {% for tag in post.tags %} 
           <a href='{{ "/tags" | relative_url }}?tag={{ tag }}'> 
