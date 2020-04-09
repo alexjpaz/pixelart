@@ -11,6 +11,9 @@
           </h1>
           <h2 class="subtitle">
               {{ page.date | date: date_format }}
+              <a href='{{ page.category | relative_url }}'> 
+                  <span class="tag is-info">{{ page.category }}</span>
+              </a>
               {% for tag in page.tags %} 
               <a href='{{ "/tags" | relative_url }}?tag={{ tag }}'> 
               <span class="tag is-info is-light">{{ tag }}</span>

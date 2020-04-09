@@ -4,7 +4,10 @@ layout: post
 category: til
 tags:
  - hue-shifting
+ - til
 ---
 
-{%- include youtube.md id="PNtMAxYaGyg" -%}
+# What is Hue Shifting?
+
+{% include youtube.md id="PNtMAxYaGyg" %}
 
