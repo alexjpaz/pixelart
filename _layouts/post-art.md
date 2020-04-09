@@ -6,14 +6,14 @@ layout: post-bulma
   <div class='section'>
      <div class='has-text-centered'>
          <img src='{{ page.image }}' 
-            {%- if page.image_background -%}
             style='
+            {%- if page.image_background -%}
             background: {{ page.image_background }};
+            {%- endif -%}
             {%- if page.image_scale_width -%}
             width: {{ page.image_scale_width }};
             {%- endif -%}
             '
-            {%- endif -%}
             class='pixelart-post-art-main-image' />
      </div>
   </div>
