@@ -20,9 +20,11 @@ layout: post-bulma
       {% assign rawtags = rawtags | split:'|' | sort | uniq %}
 
       {% for tag in rawtags %}
+      {% if tag != '' %}
       <a href='{{ "/tags" | relative_url }}?tag={{ tag }}'> 
         <span class="tag is-info is-light is-large">{{ tag }}</span>
       </a>
+      {% endif %}
       {% endfor %}
       </section>
     </div>
