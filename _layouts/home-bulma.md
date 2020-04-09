@@ -11,7 +11,7 @@
               <a class='button is-success is-large is-fullwidth' href='{{ "/gallery" | relative_url }}' >Gallery</a>
               {%- for page in site.pages -%}
               {%- if page.header_page -%}
-              <a class='button is-light is-large is-fullwidth' href='{{ page.site_url | relative_url }}' >{{ page.title }}</a>
+              <a class='button is-light is-large is-fullwidth' href='{{ page.url | relative_url }}' >{{ page.title }}</a>
               {%- endif -%}
               {%- endfor -%}
             </div>
