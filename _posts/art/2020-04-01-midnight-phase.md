@@ -1,5 +1,6 @@
 ---
 layout: post-art
+category: art
 title: midnight-phase
 tags:
   - 1bit

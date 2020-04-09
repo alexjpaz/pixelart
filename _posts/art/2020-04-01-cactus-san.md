@@ -1,5 +1,6 @@
 ---
 layout: post-art
+category: art
 title: cactus-san
 tags:
  - pixel
