@@ -1,0 +1,24 @@
+{% assign posts = include.posts %}
+
+{% assign mod = posts.size | modulo: 3 %}
+<section class="section">
+  <div class='columns'>
+    <div class='column is-half is-offset-one-quarter'>
+      <div class='has-text-centered'>
+        {%- for post in posts -%}
+        <a href="{{ post.url | relative_url }}">
+          {%- include art/thumbnail.html -%}
+        </a>
+        {%- endfor -%}
+
+        {% if mod == 1 %}
+        <span class='pixelart-gallery-image is-hidden-touch'></span>
+        <span class='pixelart-gallery-image is-hidden-touch'></span>
+        {% endif %}
+        {% if mod == 2 %}
+        <span class='pixelart-gallery-image is-hidden-touch'></span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
