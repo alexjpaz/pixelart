@@ -7,7 +7,7 @@
         {%- for post in posts -%}
         <a href="{{ post.url | relative_url }}">
           <span class='pixelart-gallery-image' style='
-            background-image: url({{ post.image }});
+            background-image: url({{ post.image | relative_url }});
             {%- if post.image_size -%}
             background-size: {{ post.image_size }};
             {%- endif -%}

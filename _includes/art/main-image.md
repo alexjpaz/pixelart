@@ -1,6 +1,6 @@
 <div class='section'>
    <div class='has-text-centered'>
-       <img src='{{ include.page.image }}' 
+       <img src='{{ include.page.image | relative_url }}' 
           style='
           {%- if include.page.image_background -%}
           background: {{ include.page.image_background }};

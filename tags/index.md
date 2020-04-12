@@ -71,7 +71,7 @@ data.posts.push({
   "title": "{{ post.title }}",
   "date_formatted": "{{ post.date | date: date_format }}",
   "url": "{{ post.url | relative_url }}",
-  "image": "{{ post.image }}",
+  "image": "{{ post.image | relative_url }}",
   "tags": {{ post.tags | jsonify }},
 });
 {% endfor %}
