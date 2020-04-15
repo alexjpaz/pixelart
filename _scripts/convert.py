@@ -6,18 +6,19 @@ basename=$(basename ${input})
 name=${basename/\.*/}
 suffix=${basename/*\./}
 today=$(date "+%Y-%m-%d")
-
-output=$(cat ${input} | openssl base64 | tr -d '\n')
+post=./_posts/arg/${today}-${name}.md
 
 mkdir -p ./_posts/art/
+cp $input ./assets/art/${name}.${suffix}
 
-cat << EOF > ./_posts/art/${today}-${name}.md
+cat << EOF > ${post}
 ---
 layout: post-art
 title: ${name}
 category: art
-image: data:image/${suffix};base64,${output}
+image: /assets/art/${name}.${suffix}
 ---
 EOF
 
-$EDITOR ./_posts/${today}-${name}.md
+$EDITOR ${post}
+
